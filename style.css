@@ -1,124 +1,140 @@
+:root {
+  --background-color: #17162E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
 body {
-  background-color: #17162e;
-
-  font-family: "Kumbh Sans", normal, sans-serif !important;
-  color: #fff;
-  padding: 20px;
+  max-width: 1260px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: stretch;
+  padding: 2rem;
+  background: var(--background-color);
+  margin: 0 auto;
 }
 
-div {
-  display: flex;
-  padding: 5px;
-  flex-direction: column;
-  align-items: center;
-}
-
-input:placeholder-shown{
-  color: #fff;
-}
-
-.input-icons i {
-  position: absolute;
-}
-
-.input-icons {
+main {
   width: 100%;
-  margin-bottom: 10px;
 }
 
-.icon {
-  padding: 28px;
-  min-width: 600px;
-  text-align: end;
-}
-
-.input-field {
-  width: 100%;
-  padding: 10px;
+h2 {
+  color: #FFF;
   text-align: center;
-  
+  margin: 2rem 0;
 }
 
-.flex-container {
+.input-container {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  display: flex;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.input-container input {
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #FFF;
+}
+
+.input-container i {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #FFF;
+}
+
+.showOnlyFavorites {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #FFF;
+}
+
+.movie {
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: #1D1C3B;
+  border-radius: 0.5rem; 
+  padding: 1rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  max-width: 1024px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.movie .movie-image {
+  width: 92px;
+  height: 92px;
+  margin-right: 1rem;
+}
+
+.movie .movie-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.movie-informations {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.movie-informations .movie-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 1rem;
 }
 
-.flex-item {
-  height: 200px;
-  margin: 20px;
-}
-
-.checkmark {
-  width: 313px;
-  height: 22px;
-  left: 577px;
-  top: 259px;
-}
-.title {
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 45px;
-}
-
-.inputSearch {
+.movie-informations .movie-text .rating-favorites {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  width: 634px;
-  min-height: 41px;
-  min-width: 600px;
-  top: 155px;
-  padding: 1%;
-  margin: 10px 0;
-  border: #ddd solid 1px;
-  opacity: 0.2;
-  border-radius: 8px;
-  padding: 5px 20px 5px 5px;
+  gap: 2rem;
 }
 
-.card {
+.movie-informations .rating, .movie-informations .favorite {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  min-height: 100px;
-  min-width: 100px;
-  padding: 1%;
-  margin: 10px 0;
-  background-color: #1d1c3b;
-  border-radius: 8px;
-  box-shadow: 32.8387px 24.5482px 79px rgba(0, 0, 0, 0.15),
-    23.8851px 17.855px 53.2479px rgba(0, 0, 0, 0.121406),
-    16.6246px 12.4276px 34.4391px rgba(0, 0, 0, 0.10125),
-    10.9035px 8.15079px 21.3701px rgba(0, 0, 0, 0.0867188),
-    6.56775px 4.90965px 12.8375px rgba(0, 0, 0, 0.075),
-    3.46346px 2.58907px 7.6377px rgba(0, 0, 0, 0.0632813),
-    1.4367px 1.07399px 4.56719px rgba(0, 0, 0, 0.04875),
-    0.333519px 0.249318px 2.42246px rgba(0, 0, 0, 0.0285938);
+  gap: 0.5rem;
+  font-size: 0.8rem;
 }
 
-.logoMovie {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
+.movie-informations .rating i {
+  width: 16px;
 }
 
-.iconFavorite {
-  left: 28.84%;
-  right: 69.45%;
-  top: 54.73%;
-  bottom: 36.2%;
-  color: #ba0707;
+.movie-informations .favorite i {
+  cursor: pointer;
+  transition: all .3s;
+  width: 1.2rem;
 }
 
-.iconClass {
-  left: 20.26%;
-  right: 78.1%;
-  top: 57.71%;
-  bottom: 32.83%;
-  color: #d7a82f;
+.movie-informations .favorite i:hover {
+  transform: scale(1.1);
 }
+
+.movie-description {
+  max-width: 50%;
+  color: #ACACAC;
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.5rem;
+}
+
